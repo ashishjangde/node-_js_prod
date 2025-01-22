@@ -1,0 +1,36 @@
+{
+  "name": "ecommerce",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "docker-compose stop && docker-compose up -d && bun run --watch src/index.ts",
+    "stop": "docker-compose stop",
+    "start": "bun run dist/index.js",
+    "build": "tsc && docker build -t mybackend:latest",
+    "db:gen": "docker-compose stop && docker-compose up -d && npx drizzle-kit generate",
+    "db:mig": "docker-compose stop && docker-compose up -d && npx drizzle-kit migrate",
+    "db:std": " npx drizzle-kit studio"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/bun": "latest",
+    "@types/cors": "^2.8.17",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/pg": "^8.11.10",
+    "drizzle-kit": "^0.30.2",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@types/cookie-parser": "^1.4.8",
+    "@types/express": "^5.0.0",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.38.4",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.13.1",
+    "zod": "^3.24.1"
+  }
+}
