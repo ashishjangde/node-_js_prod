@@ -8,11 +8,9 @@ const app = express();
 
 //middlewares
 app.use(express.json({
-    limit: '50kb'
+    limit: '500kb'
 }));
-app.use(express.urlencoded({
-    extended: true
-}));
+
 
 app.use(cors({
     origin: 'http://localhost:3000',
@@ -20,10 +18,14 @@ app.use(cors({
 }));
 app.use(cookieparser());
 app.use(express.static('public'));
-
+app.use(express.urlencoded({
+    extended: true
+}));
 
 // routes
 app.use('/api/v1/auth', authRoutes);
+
+
 
 // error handler
 app.use(errorMiddleware);

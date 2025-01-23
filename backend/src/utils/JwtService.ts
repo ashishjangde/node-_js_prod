@@ -7,7 +7,7 @@ let SECRET: string =  "asdasd";
 
 export const JwtService = {
 
-    genrateAccessToken: (User: IUser) : string =>  {
+    generateAccessToken: (User: IUser) : string =>  {
         return jwt.sign(
         {
             id : User.id,
@@ -21,7 +21,7 @@ export const JwtService = {
         });
     },
 
-    genrateRefreshToken: (User: IUser) : string => {
+    generateRefreshToken: (User: IUser) : string => {
         return jwt.sign(
         {
             id : User.id,

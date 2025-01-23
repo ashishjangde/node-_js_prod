@@ -6,7 +6,7 @@
     "dev": "docker-compose stop && docker-compose up -d && bun run --watch src/index.ts",
     "stop": "docker-compose stop",
     "start": "bun run dist/index.js",
-    "build": "tsc && docker build -t mybackend:latest",
+    "build": "tsc && docker --debug buildx build -t mybackend:latest .",
     "db:gen": "docker-compose stop && docker-compose up -d && npx drizzle-kit generate",
     "db:mig": "docker-compose stop && docker-compose up -d && npx drizzle-kit migrate",
     "db:std": " npx drizzle-kit studio"

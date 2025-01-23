@@ -3,7 +3,7 @@ export interface IUser {
     name: string;
     email: string;
     username: string;
-    password: string;
+    password: string | null;
     isVerified: boolean;
     verificationCode: string | null;
     created_at: Date;
@@ -24,7 +24,7 @@ interface IDbUser{
     name: string;
     email: string;
     username: string;
-    password: string;
+    password: string ;
     isVerified: boolean;
     verificationCode: string;
 }

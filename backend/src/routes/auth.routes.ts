@@ -6,7 +6,4 @@ const router = Router();
 
 router.post('/signup', signup);
 
-router.get('/helo',(req, res)=>{
-    res.json({message: 'Hello World'});
-})
 export default router;

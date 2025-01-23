@@ -8,6 +8,13 @@
       "when": 1737564055212,
       "tag": "0000_clever_blindfold",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1737619632360,
+      "tag": "0001_low_hellfire_club",
+      "breakpoints": true
     }
   ]
 }
